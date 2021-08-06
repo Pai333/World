@@ -118,7 +118,6 @@ proxy-groups:
     type: select
   - name: Telegram
     proxies:
-      - DIRECT
       - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
