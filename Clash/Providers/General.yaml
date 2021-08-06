@@ -37,7 +37,7 @@ dns:
     ipcidr: null
 proxies: null
 proxy-providers:
-  Proxy:
+  AllProxy:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%5E%28%28%3F%21%28%E5%89%A9%E4%BD%99%7C%E8%BF%87%E6%9C%9F%29%29.%29%2A%24&emoji=-1&sort=0
     interval: 21600
@@ -95,38 +95,49 @@ proxy-groups:
   - name: 手动选择
     type: select
     use:
-      - Proxy
+      - AllProxy
     url: http://www.gstatic.com/generate_204
     interval: 300
   - name: Emby
     proxies:
       - DIRECT
+      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
     type: select
   - name: Netflix
     proxies:
+      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
     type: select
   - name: Telegram
     proxies:
       - DIRECT
+      - 手动选择
       - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
     type: select
   - name: 港台番剧
     type: select
     proxies:
       - DIRECT
+      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
     _index: 2
   - name: 国际媒体
     type: select
     proxies:
+      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
@@ -135,6 +146,7 @@ proxy-groups:
   - name: 全球加速
     type: select
     proxies:
+      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
@@ -144,6 +156,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 手动选择
       - 全球加速
   - name: 🇭🇰 香港节点
     type: url-test
