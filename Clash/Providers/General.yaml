@@ -101,29 +101,29 @@ proxy-groups:
   - name: Emby
     proxies:
       - DIRECT
-      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
+      - 手动选择
     type: select
   - name: Netflix
     proxies:
-      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
+      - 手动选择
     type: select
   - name: Telegram
     proxies:
-      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
+      - 手动选择
     type: select
   - name: 港台番剧
     type: select
@@ -136,27 +136,27 @@ proxy-groups:
   - name: 国际媒体
     type: select
     proxies:
-      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
+      - 手动选择
   - name: 全球加速
     type: select
     proxies:
-      - 手动选择
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
+      - 手动选择
   - name: Final
     type: select
     proxies:
       - DIRECT
-      - 手动选择
       - 全球加速
+      - 手动选择
   - name: 🇭🇰 香港节点
     type: url-test
     use:
