@@ -6,3 +6,7 @@ https://yattazen.com/tutorial/clash-custom-config.html
 利用在线订阅转换 
 https://acl4ssr-sub.github.io/
 其中的远程配置选 ini文件地址即可
+
+
+subconverter
+https://gitee.com/mrliu1996/subconverter
