@@ -1,0 +1,295 @@
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+hosts:
+  mtalk.google.com: 108.177.125.188
+  dl.google.com: 180.163.151.161
+  dl.l.google.com: 180.163.151.161
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 119.29.29.29
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
+  nameserver:
+    - 119.29.29.29
+  fallback-filter:
+    geoip: true
+    ipcidr: null
+proxies: null
+proxy-providers:
+  AllProxy:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%5E%28%28%3F%21%28%E5%89%A9%E4%BD%99%7C%E8%BF%87%E6%9C%9F%29%29.%29%2A%24&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/ProxyList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  HK:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E6%B8%AF%7CHK&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/HKList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TW:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E5%8F%B0%7CTW&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/TWList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  JP:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E6%97%A5%7CJP&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/JPList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  SG:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%28%3F%3D.%2A%28%E6%96%B0%7C%E7%8B%AE%7C%E7%8D%85%7CSG%7C%28%3Fi%29Singapore%29%29%5E%28%28%3F%21%28%E6%B8%AF%7C%E5%8F%B0%7C%E6%97%A5%7C%E9%9F%A9%7C%E7%BE%8E%29%29.%29%2A%24&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/SGList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  US:
+    type: http
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E7%BE%8E%7CUS&emoji=-1&sort=0
+    interval: 21600
+    path: ./Proxy/USList.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+proxy-groups:
+  - name: 手动选择
+    type: select
+    use:
+      - AllProxy
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: Emby
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+    type: select
+  - name: Netflix
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+    type: select
+  - name: Telegram
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+    type: select
+  - name: 港台番剧
+    type: select
+    proxies:
+      - DIRECT
+      - 手动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+    _index: 2
+  - name: 国际媒体
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+  - name: 全球加速
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+  - name: Final
+    type: select
+    proxies:
+      - DIRECT
+      - 全球加速
+      - 手动选择
+  - name: 🇭🇰 香港节点
+    type: url-test
+    use:
+      - HK
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 10
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    use:
+      - TW
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 10
+  - name: 🇯🇵 日本节点
+    type: url-test
+    use:
+      - JP
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 10
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    use:
+      - SG
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 10
+  - name: 🇺🇲 美国节点
+    type: url-test
+    use:
+      - US
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 10
+  - name: 国内直连
+    type: select
+    proxies:
+      - DIRECT
+rule-providers:
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
+  Advertising:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Guard/Advertising.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Advertising.yaml
+    interval: 86400
+  Hijacking:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Guard/Hijacking.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Hijacking.yaml
+    interval: 86400
+  Privacy:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Guard/Privacy.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Privacy.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/Video/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/Netflix.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Telegram/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master//Clash/RuleSet/Extra/Telegram/Telegram.yaml
+    interval: 86400
+  Streaming:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/Streaming.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+    interval: 86400
+  StreamingSE:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/StreamingSE.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
+    interval: 86400
+  Global:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Global.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+rules:
+  # EMBY公益服	
+  - DOMAIN-SUFFIX, emby.wtf,Emby
+  - DOMAIN-SUFFIX, odysseyplus.site, Emby
+
+  - DOMAIN-SUFFIX,btbtt.biz, 全球加速
+
+  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,Advertising,REJECT
+  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Privacy,REJECT
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,StreamingSE,港台番剧
+  - RULE-SET,Streaming,国际媒体
+  - RULE-SET,Global,全球加速
+  - RULE-SET,China,DIRECT
+
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  - IP-CIDR,125.91.16.220/32,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
