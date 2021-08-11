@@ -1,6 +1,6 @@
 ![示例](https://raw.githubusercontent.com/Orz-3/mini/none/yaofan.png)
 
-## QuantumultX小白配置
+## QuantumultX [@小白配置](https://github.com/Orz-3/QuantumultX)
 
 ### 配置说明：
 
