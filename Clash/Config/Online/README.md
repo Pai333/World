@@ -9,6 +9,7 @@ https://acl4ssr-sub.github.io/
 
 ACL4SSR
 https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash
-
+神机规则 
+https://github.com/DivineEngine/Profiles/tree/master/Clash
 subconverter
 https://gitee.com/mrliu1996/subconverter
