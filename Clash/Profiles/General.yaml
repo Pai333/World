@@ -97,7 +97,7 @@ proxy-groups:
     use:
       - AllProxy
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 600
   - name: 节点选择
     proxies:
       - DIRECT
