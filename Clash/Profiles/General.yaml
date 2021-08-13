@@ -98,11 +98,22 @@ proxy-groups:
       - AllProxy
     url: http://www.gstatic.com/generate_204
     interval: 300
+  - name: 节点选择
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动选择
+    type: select
   - name: Emby
     proxies:
       - DIRECT
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
       - 手动选择
@@ -155,7 +166,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 全球加速
+      - 节点选择
       - 手动选择
   - name: 🇭🇰 香港节点
     type: url-test
