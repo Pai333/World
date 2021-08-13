@@ -92,19 +92,19 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 proxy-groups:
-  - name: 手动选择
+  - name: 手动切换
     type: select
     use:
       - AllProxy
   - name: 节点选择
     proxies:
-      - DIRECT
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
+      - DIRECT
     type: select
   - name: Emby
     proxies:
@@ -114,7 +114,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
     type: select
   - name: Netflix
     proxies:
@@ -123,7 +123,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
     type: select
   - name: Telegram
     proxies:
@@ -132,13 +132,13 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
     type: select
   - name: 港台番剧
     type: select
     proxies:
       - DIRECT
-      - 手动选择
+      - 手动切换
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
     _index: 2
@@ -150,7 +150,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
   - name: 全球加速
     type: select
     proxies:
@@ -159,13 +159,13 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
-      - 手动选择
+      - 手动切换
   - name: Final
     type: select
     proxies:
       - DIRECT
       - 节点选择
-      - 手动选择
+      - 手动切换
   - name: 🇭🇰 香港节点
     type: url-test
     use:
