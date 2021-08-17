@@ -5,7 +5,7 @@ https://yattazen.com/tutorial/clash-custom-config.html
 
 利用在线订阅转换 
 https://acl4ssr-sub.github.io/
-其中的远程配置选 ini文件地址即可
+其中的远程配置粘贴自己的ini文件地址即可
 
 ACL4SSR
 https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash
