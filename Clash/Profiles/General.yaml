@@ -48,7 +48,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   HK:
     type: http
-    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E6%B8%AF%7CHK&emoji=-1&sort=0
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%B8%AF%7CHK%7C(%3Fi)Hong))&emoji=-1&sort=0
     interval: 21600
     path: ./Proxy/HKList.yaml
     health-check:
@@ -57,7 +57,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   TW:
     type: http
-    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E5%8F%B0%7CTW&emoji=-1&sort=0
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E5%8F%B0%7CTW%7C(%3Fi)Taiwan))&emoji=-1&sort=0
     interval: 21600
     path: ./Proxy/TWList.yaml
     health-check:
@@ -66,7 +66,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   JP:
     type: http
-    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E6%97%A5%7CJP&emoji=-1&sort=0
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%97%A5%7CJP%7C(%3Fi)Japan))&emoji=-1&sort=0
     interval: 21600
     path: ./Proxy/JPList.yaml
     health-check:
@@ -75,7 +75,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   SG:
     type: http
-    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%28%3F%3D.%2A%28%E6%96%B0%7C%E7%8B%AE%7C%E7%8D%85%7CSG%7C%28%3Fi%29Singapore%29%29%5E%28%28%3F%21%28%E6%B8%AF%7C%E5%8F%B0%7C%E6%97%A5%7C%E9%9F%A9%7C%E7%BE%8E%29%29.%29%2A%24&emoji=-1&sort=0
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%96%B0%7C%E7%8B%AE%7C%E7%8D%85%7CSG%7C(%3Fi)Singapore))&emoji=-1&sort=0
     interval: 21600
     path: ./Proxy/SGList.yaml
     health-check:
@@ -84,7 +84,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   US:
     type: http
-    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%E7%BE%8E%7CUS&emoji=-1&sort=0
+    url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%97%A5%7CJP%7C(%3Fi)Japan))&emoji=-1&sort=0
     interval: 21600
     path: ./Proxy/USList.yaml
     health-check:
