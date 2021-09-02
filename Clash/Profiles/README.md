@@ -10,5 +10,5 @@
 <a href="https://github.com/DivineEngine/Profiles/tree/master/Clash">https://github.com/DivineEngine/Profiles/tree/master/Clash</a> </p>
 <p>API地址 
 <a href="https://github.com/KOP-XIAO/QuantumultX-Surge-API">https://github.com/KOP-XIAO/QuantumultX-Surge-API</a></p>
-<p>Urlencode (多个链接用 + 分隔,如不行改用 |) 
+<p>Urlencode (多个链接用 "+" 分隔,如不行改用 "|") 
 <a href="https://www.urlencoder.org/">https://www.urlencoder.org/</a></p>
