@@ -3,5 +3,8 @@ DOMAIN-SUFFIX,btbtt.biz
 # 在线视频
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,netflav.com
-#plex
+#PLEX
 DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.services
+IP-CIDR,38.94.108.0/20
