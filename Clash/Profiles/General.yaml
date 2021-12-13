@@ -34,18 +34,20 @@ dns:
     - 119.29.29.29
   fallback-filter:
     geoip: true
-    ipcidr: null
-proxies: null
+    ipcidr: 
+proxies: 
 proxy-providers:
+
   AllProxy:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=%5E%28%28%3F%21%28%E5%89%A9%E4%BD%99%7C%E8%BF%87%E6%9C%9F%29%29.%29%2A%24&emoji=-1&sort=0
     interval: 21600
-    path: ./Proxy/ProxyList.yaml
+    path: ./Proxy/AllProxyList.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
   HK:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%B8%AF%7CHK%7C(%3Fi)Hong))&emoji=-1&sort=0
@@ -55,6 +57,7 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
   TW:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E5%8F%B0%7CTW%7C(%3Fi)Taiwan))&emoji=-1&sort=0
@@ -64,6 +67,7 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
   JP:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%97%A5%7CJP%7C(%3Fi)Japan))&emoji=-1&sort=0
@@ -73,6 +77,7 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
   SG:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%96%B0%7C%E7%8B%AE%7C%E7%8D%85%7CSG%7C(%3Fi)Singapore))&emoji=-1&sort=0
@@ -82,6 +87,7 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
   US:
     type: http
     url: https://dove.589669.xyz/all2clash?&sub=在此输入订阅&filter=(%3F%3D.*(%E6%97%A5%7CJP%7C(%3Fi)Japan))&emoji=-1&sort=0
@@ -91,7 +97,9 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      
 proxy-groups:
+  
   - name: 手动切换
     type: select
     use:
@@ -106,6 +114,7 @@ proxy-groups:
       - 手动切换
       - DIRECT
     type: select
+  
   - name: Emby
     proxies:
       - DIRECT
@@ -116,6 +125,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 手动切换
     type: select
+  
   - name: Netflix
     proxies:
       - 🇭🇰 香港节点
@@ -125,6 +135,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 手动切换
     type: select
+  
   - name: Telegram
     proxies:
       - 🇭🇰 香港节点
@@ -134,6 +145,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 手动切换
     type: select
+   
   - name: 港台番剧
     type: select
     proxies:
@@ -141,7 +153,7 @@ proxy-groups:
       - 手动切换
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
-    _index: 2
+      
   - name: 国际媒体
     type: select
     proxies:
@@ -151,6 +163,7 @@ proxy-groups:
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
       - 手动切换
+      
   - name: 全球加速
     type: select
     proxies:
@@ -160,12 +173,14 @@ proxy-groups:
       - 🇸🇬 新加坡节点
       - 🇺🇲 美国节点
       - 手动切换
+     
   - name: Final
     type: select
     proxies:
       - DIRECT
       - 节点选择
       - 手动切换
+      
   - name: 🇭🇰 香港节点
     type: url-test
     use:
@@ -173,6 +188,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 10
+  
   - name: 🇨🇳 台湾节点
     type: url-test
     use:
@@ -180,6 +196,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 10
+  
   - name: 🇯🇵 日本节点
     type: url-test
     use:
@@ -187,6 +204,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 10
+  
   - name: 🇸🇬 新加坡节点
     type: url-test
     use:
@@ -194,6 +212,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 10
+  
   - name: 🇺🇲 美国节点
     type: url-test
     use:
@@ -201,6 +220,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 10
+  
   - name: 国内直连
     type: select
     proxies:
@@ -212,60 +232,70 @@ rule-providers:
     path: ./RuleSet/Unbreak.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
+  
   Advertising:
     type: http
     behavior: classical
     path: ./RuleSet/Guard/Advertising.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Advertising.yaml
     interval: 86400
+  
   Hijacking:
     type: http
     behavior: classical
     path: ./RuleSet/Guard/Hijacking.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Hijacking.yaml
     interval: 86400
+  
   Privacy:
     type: http
     behavior: classical
     path: ./RuleSet/Guard/Privacy.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Guard/Privacy.yaml
     interval: 86400
+  
   Netflix:
     type: http
     behavior: classical
     path: ./RuleSet/StreamingMedia/Video/Netflix.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/Netflix.yaml
     interval: 86400
+  
   Telegram:
     type: http
     behavior: classical
     path: ./RuleSet/Extra/Telegram/Telegram.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master//Clash/RuleSet/Extra/Telegram/Telegram.yaml
     interval: 86400
+  
   Streaming:
     type: http
     behavior: classical
     path: ./RuleSet/StreamingMedia/Streaming.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
     interval: 86400
+  
   StreamingSE:
     type: http
     behavior: classical
     path: ./RuleSet/StreamingMedia/StreamingSE.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
     interval: 86400
+  
   Global:
     type: http
     behavior: classical
     path: ./RuleSet/Global.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml
     interval: 86400
+  
   China:
     type: http
     behavior: classical
     path: ./RuleSet/China.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/China.yaml
     interval: 86400
+  
   ChinaIP:
     type: http
     behavior: ipcidr
@@ -276,9 +306,9 @@ rules:
   # EMBY公益服	
   - DOMAIN-SUFFIX, emby.wtf,Emby
   - DOMAIN-SUFFIX, odysseyplus.site, Emby
-
+  
   - DOMAIN-SUFFIX,btbtt.biz, 全球加速
-
+  
   - RULE-SET,Unbreak,DIRECT
   - RULE-SET,Advertising,REJECT
   - RULE-SET,Hijacking,REJECT
@@ -289,7 +319,7 @@ rules:
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,Global,全球加速
   - RULE-SET,China,DIRECT
-
+  
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
