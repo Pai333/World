@@ -1,10 +1,14 @@
-#BT 下载
+#BT
 DOMAIN-SUFFIX,btbtt.biz
 # 在线视频
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,netflav.com
+DOMAIN-SUFFIX,91porn.com
+
 #Plex
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,plex.services
 IP-CIDR,38.94.108.0/20
+
+DOMAIN-SUFFIX,prprcloud.moe
