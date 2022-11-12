@@ -56,7 +56,7 @@ proxy-providers:
 
   Proxy:
     type: http
-    url: "■■■■■■"
+    url: "█████████████"
     interval: 3600
     path: ./ProxyList.yaml
     health-check:
@@ -146,7 +146,17 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 手动切换
     type: select
-  
+
+  - name: Youtube
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇺🇲 美国节点
+      - 手动切换
+    type: select
+
   - name: Telegram
     proxies:
       - 🇭🇰 香港节点
@@ -232,11 +242,6 @@ proxy-groups:
     interval: 600
     tolerance: 10
   
-  - name: 国内直连
-    type: select
-    proxies:
-      - DIRECT
-
 rule-providers:
 
   Unbreak:
@@ -272,6 +277,13 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/StreamingMedia/Video/Netflix.yaml
     url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/Netflix.yaml
+    interval: 86400
+  
+  Youtube:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/Video/Youtube.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Video/YouTube.yaml
     interval: 86400
 
   Telegram:
@@ -329,6 +341,7 @@ rules:
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Privacy,REJECT
   - RULE-SET,Telegram,Telegram
+  - RULE-SET,Youtube,Youtube
   - RULE-SET,Netflix,Netflix
   - RULE-SET,StreamingSE,港台番剧
   - RULE-SET,Streaming,国际媒体
@@ -345,5 +358,4 @@ rules:
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
   - GEOIP,CN,DIRECT
-
   - MATCH,Final
