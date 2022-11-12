@@ -10,7 +10,7 @@
 <p>3️⃣打开文件并编辑，把 第59行的这段 █████████████ 替换成刚才复制的转换链接</p>
 
 
-#### 订阅转换
+#### Shawn订阅转换
 https://dove.589669.xyz/web
 #### 神机规则
 https://github.com/DivineEngine/Profiles/tree/master/Clash
